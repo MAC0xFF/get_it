@@ -2,7 +2,8 @@ sudo apt install openvpn
 
 sudo sed -i '/#AUTOSTART/s/#//' /etc/default/openvpn
 
-sudo systemctl enable openvpn.service - включение автозапуска
+# включение автозапуска
+sudo systemctl enable openvpn.service 
 
 # скачать конфиг впна
 # вместо Test вставляем название заведение из полученного в боте https://t.me/BeOpenVPN_Bot конфига
@@ -11,5 +12,8 @@ wget -q https://repo.open-s.info/ovpn-configs/Test.ovpn
 # Копируем полученный файл в конфиг OVPN
 sudo cp Test.ovpn /etc/openvpn/client.conf 
 
-sudo systemreboot # Перезагрузка ПК киоска
-ip a # успехом установки и настройки будет появление tun0 интерфейса
+# Перезагрузка ПК киоска
+sudo systemctl reboot 
+
+# успехом установки и настройки будет появление tun0 интерфейса
+ip -br a 
