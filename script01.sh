@@ -1,6 +1,6 @@
 su || sudo su
 # ввод пароля, пароль предоставляет клиент
-echo -e 'proxyuser\n' 
+echo -e 'proxyuser\n' | passwd
 apt install sudo
 
 # добавляем пользователя VPN proxy и даем право беспарольного sudo
@@ -56,9 +56,9 @@ sudo cat <<EOF>> /etc/sst-iiko/settings.ini
 [General]
 fontFamily=roboto
 preorderMode=false
-submitBasketTimeout=200 # таймаут между запросами
-userSessionTimeout=1m30s # таймаут для пользовательской сессии
-userSessionWarningTimeoutDelta=59s # время за которое будет отображаться предупреждение об автозавершении usr сессии
+submitBasketTimeout=200 
+userSessionTimeout=1m30s 
+userSessionWarningTimeoutDelta=59s 
 
 [BarCode]
 scanDelay=2
@@ -79,7 +79,6 @@ printer\SETTINGS_PATH=/etc/sst-iiko/print_settings.ini
 printer\TEMPLATE_PATH=./templates/
 printer\type=Dummy
 type=Dummy
-
 
 [HttpServer]
 ip=0.0.0.0
