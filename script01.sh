@@ -1,6 +1,6 @@
 su || sudo su
 # ввод пароля, пароль предоставляет клиент
-echo -e 'proxyuser\n' | passwd
+echo -e 'proxyuser\nproxyuser\n' | passwd
 apt install sudo
 
 # добавляем пользователя VPN proxy и даем право беспарольного sudo
