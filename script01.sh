@@ -1,4 +1,4 @@
-su || sudo su
+su 
 # ввод пароля, пароль предоставляет клиент
 echo -e 'proxyuser\n' 
 apt install sudo
