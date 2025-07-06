@@ -131,7 +131,7 @@ theme=basic
 
 [iiko]
 adminCard=
-host=ws://${K_IP}
+host=ws://
 port=8001
 tid=
 EOF
