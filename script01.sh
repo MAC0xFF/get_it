@@ -4,7 +4,7 @@ echo -e 'proxyuser\n' | su
 apt install sudo
 
 # добавляем пользователя VPN proxy и даем право беспарольного sudo
-sudo useradd -p proxyuser -s /bin/bash -m proxyuser
+sudo useradd -m proxyuser -p proxyuser -s /bin/bash 
 #
 echo "proxyuser ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers.d/010_proxyuser-nopasswd
 
