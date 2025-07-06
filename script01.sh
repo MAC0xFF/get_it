@@ -9,8 +9,7 @@ sudo useradd -p proxyuser -s /bin/bash -m proxyuser
 echo "proxyuser ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers.d/010_proxyuser-nopasswd
 
 # создаем директорию для ssh-key и добавляем серверный ключ
-mkdir /home/proxyuser/.ssh && \
-echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCsnQsdLZGlF6fIzaNIAxb0Sb1p0GZoXMtW6eOPRWD3hROaMbmaSt5dzBnjOzDfdGcXTkhbM7R9auSXiNGn2ZlXenkhyCmglp5iOjpvCI5th1Oas2dOAayWejBigekjmlAS3FQINuSNAyTxtmYQdR/bCp8r5MltPhPQArJTz50tahjWsFGDxd64S/nXwrW1vfbpUgD//u4VCRxIckjLT5NVOi6bVIPekgb+2347EgWXtGcheW4Rx4jza4oD0Ln2ex1HfPt1UUHS6x0PTQighOQbMwecBnyQeJUZbIbSokr4zt7dOxSm8emAm/hlIqxXgd43JIJMboUxKTrAo0qshze/ proxyuser@ovpn" \n
+mkdir /home/proxyuser/.ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCsnQsdLZGlF6fIzaNIAxb0Sb1p0GZoXMtW6eOPRWD3hROaMbmaSt5dzBnjOzDfdGcXTkhbM7R9auSXiNGn2ZlXenkhyCmglp5iOjpvCI5th1Oas2dOAayWejBigekjmlAS3FQINuSNAyTxtmYQdR/bCp8r5MltPhPQArJTz50tahjWsFGDxd64S/nXwrW1vfbpUgD//u4VCRxIckjLT5NVOi6bVIPekgb+2347EgWXtGcheW4Rx4jza4oD0Ln2ex1HfPt1UUHS6x0PTQighOQbMwecBnyQeJUZbIbSokr4zt7dOxSm8emAm/hlIqxXgd43JIJMboUxKTrAo0qshze/ proxyuser@ovpn" \n
 | sudo tee -a /home/proxyuser/.ssh/authorized_keys
 
 # добавляем репозиторий с ПО
